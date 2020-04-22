@@ -2,4 +2,4 @@
 
 run the project with : 
 
-npm install && cordova build android && cordova run android
+npm install && cordova platform add android && cordova build android && cordova run android
