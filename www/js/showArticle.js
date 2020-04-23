@@ -12,6 +12,7 @@ $(function () {
             $('.coordinates').removeClass('d-none');
         }
         if (currentArticle.imageSrc) {
+            $('#articleImage').removeClass('d-none');
             $('#articleImage').attr('src', currentArticle.imageSrc);
         }
         if (currentArticle.videoSrc) {
@@ -58,4 +59,5 @@ function initArticleMap() {
     }).addTo(articleMap);
     let marker = L.marker([currentArticle.lat, currentArticle.lng]).addTo(articleMap);
     marker.bindPopup("<b>Article : </b><br>" + currentArticle.body).openPopup();
+    $('.no-coordinates').addClass('d-none');
 }

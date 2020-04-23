@@ -41,14 +41,35 @@
         </ul>
     </div>
 </nav>
-<h1>Body : <span id="articleBody"></span></h1>
-<h1>Date : <span id="articleDate"></span></h1>
-<h1 class="d-none coordinates">Lat : <span id="articleLat"></span></h1>
-<h1 class="d-none coordinates">Lng : <span id="articleLng"></span></h1>
-<img id="articleImage" width="50%" height="50%">
-<video controls="controls" width="50%" height="50%" class="d-none" id="articleVideo">
-</video>
-<div id="articlePosition" style="width: 400px; height: 200px">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <p>Body : <span id="articleBody"></span></p>
+        </div>
+        <div class="col-12">
+            <p>Date : <span id="articleDate"></span></p>
+        </div>
+        <div class="col-6">
+            <p class="d-none coordinates">Lat : <span id="articleLat"></span></p>
+        </div>
+        <div class="col-6">
+            <p class="d-none coordinates">Lng : <span id="articleLng"></span></p>
+        </div>
+        <div class="col-6">
+            <img id="articleImage" width="100%" height="100%" class="d-none">
+        </div>
+        <div class="col-6">
+            <video controls="controls" width="100%" height="100%" class="d-none" id="articleVideo">
+            </video>
+        </div>
+        <div class="col-12">
+            <p class="no-coordinates">
+                No coordinates available for this article.
+            </p>
+            <div id="articlePosition" style="height: 200px">
+            </div>
+        </div>
+    </div>
 </div>
 <script type="text/javascript" src="../cordova.js"></script>
 <script src="../js/showArticle.js"></script>

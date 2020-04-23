@@ -19,13 +19,41 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <h1 class="navbar-brand" id="home">Home</h1>
 </nav>
-<input type="text" id="articleBody">
-<button id="confirmNewArticle">Confirm</button>
-<button id="cameraTakePicture">Take a picture</button>
-<img id="articleImage" width="50%" height="50%">
-<button id="cameraTakeVideo">Take a video</button>
-<video controls="controls" width="50%" height="50%" id="articleVideo" class="d-none">
-</video>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Article's Body</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Text" id="articleBody" aria-label="Username"
+                       aria-describedby="basic-addon1">
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center pb-3">
+        <div class="col-auto">
+            <button id="cameraTakePicture" class="btn btn-info">Take a picture</button>
+        </div>
+        <div class="col-auto">
+            <button id="cameraTakeVideo" class="btn btn-info">Take a video</button>
+        </div>
+    </div>
+    <div class="row justify-content-center pb-3">
+        <div class="col-auto">
+            <button id="confirmNewArticle" class="btn btn-primary">Confirm</button>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <img id="articleImage" width="100%" height="100%" class="d-none">
+        </div>
+        <div class="col-6">
+            <video controls="controls" width="100%" height="100%" class="d-none" id="articleVideo">
+            </video>
+        </div>
+    </div>
+</div>
 <script type="text/javascript" src="../cordova.js"></script>
 <script src="../js/newArticle.js"></script>
 <script type="text/javascript" src="../js/common.js"></script>

@@ -12,10 +12,17 @@ $(function () {
             $('#articleBody').val(currentArticle.body);
             $('#articleLat').val(currentArticle.lat);
             $('#articleLng').val(currentArticle.lng);
-            $('#articleImage').attr('src', currentArticle.imageSrc);
-            $('#articleVideo').attr('src', currentArticle.videoSrc);
-            $('video').removeClass('d-none');
-            checkLoad();
+            if (currentArticle.imageSrc) {
+                $('#articleImage').removeClass('d-none');
+                $('#articleImage').attr('src', currentArticle.imageSrc);
+            }
+            if (currentArticle.videoSrc) {
+                $('#articleVideo').removeClass('d-none');
+                $('#articleVideo').attr('src', currentArticle.videoSrc);
+                checkLoad();
+            } else {
+                navigator.splashscreen.hide();
+            }
         } else {
             navigator.splashscreen.hide();
         }
@@ -32,6 +39,7 @@ function newArticle() {
 function takePicture() {
     navigator.camera.getPicture(function (imageData) {
         $('#articleImage').attr('src', "data:image/jpeg;base64," + imageData);
+        $('#articleImage').removeClass('d-none');
     }, function () {
     }, {
         quality: 50,
