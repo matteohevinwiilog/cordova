@@ -47,7 +47,7 @@ function fillListWithRetrievedArticles() {
     let articles = retrieveAndSortArticles();
     articles.forEach(function (article) {
         let imageSrc = article.imageSrc ?? fileNotFoundURL;
-        $articleCard = '<div class="card mt-3 mb-3 shadow" id="' + article.id + '" style="width: 18rem;">';
+        let $articleCard = '<div class="card mt-3 mb-3 shadow" id="' + article.id + '" style="width: 18rem;">';
         $articleCard += '<img class="card-img-top" height="150px" src="' + imageSrc + '">';
         $articleCard += '<div class="card-body">';
         $articleCard += '<h5 class="card-title">' + article.body + '</h5>';
